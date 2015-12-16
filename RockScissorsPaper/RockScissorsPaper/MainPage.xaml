@@ -7,7 +7,33 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid RenderTransformOrigin="0.489,0.490" RequestedTheme="Light" Background="WhiteSmoke">
+        <TextBlock x:Name="PlayerPicLabel" HorizontalAlignment="Left" Margin="46,77,0,0" TextWrapping="Wrap" Text="Player" VerticalAlignment="Top"/>
+        <TextBlock x:Name="GamesPlayedLabel" HorizontalAlignment="Left" Margin="125,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top">
+        	<Run Text="Games Played"/>
+        	<Run Text=":"/>
+        </TextBlock>
+        <TextBlock x:Name="ComputerPicLabel" HorizontalAlignment="Left" Margin="251,77,0,0" TextWrapping="Wrap" Text="Computer" VerticalAlignment="Top"/>
+        <Image x:Name="PlayerImage" HorizontalAlignment="Left" Height="140" Margin="10,103,0,0" VerticalAlignment="Top" Width="140" Source="Assets/QuestionMark.jpg"/>
+        <Image x:Name="ComputerImage" HorizontalAlignment="Left" Height="141" Margin="210,102,0,0" VerticalAlignment="Top" Width="141" Source="Assets/QuestionMark.jpg"/>
+        <TextBlock x:Name="GamesPlayed" HorizontalAlignment="Left" Margin="170,83,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="26" Height="20"/>
+        <TextBlock x:Name="CpuProgressLabel" HorizontalAlignment="Left" Margin="216,274,0,0" TextWrapping="Wrap" Text="Computer Progress" VerticalAlignment="Top" Width="138"/>
+        <TextBlock x:Name="PlayerProgressLabel" HorizontalAlignment="Left" Margin="29,274,0,0" TextWrapping="Wrap" Text="Player Progress" VerticalAlignment="Top"/>
+        <TextBlock x:Name="CpuScoreLabel" HorizontalAlignment="Left" Margin="248,346,0,0" TextWrapping="Wrap" Text="CPU Score" VerticalAlignment="Top" RenderTransformOrigin="-1.921,-0.033"/>
+        <TextBlock x:Name="PlayerScoreLabel" HorizontalAlignment="Left" Margin="39,346,0,0" TextWrapping="Wrap" Text="Player Score" VerticalAlignment="Top"/>
+        <Button x:Name="PlayButton" Content="Play" HorizontalAlignment="Left" Margin="210,505,0,0" VerticalAlignment="Top" Width="134" Click="PlayButton_Click" Height="69" FontStretch="Expanded" FontSize="20" FontFamily="Snap ITC" BorderBrush="#FF0F0303" AllowDrop="True"/>
+        <Button x:Name="NewGameButton" Content="New Game" HorizontalAlignment="Left" Margin="210,411,0,0" VerticalAlignment="Top" Width="134" Click="NewGameButton_Click" Height="68" FontFamily="Snap ITC" FontSize="20" BorderThickness="2" BorderBrush="#FF0A0000"/>
+        <RadioButton x:Name="RockRadio" Content="Rock" HorizontalAlignment="Left" Margin="24,419,0,0" VerticalAlignment="Top" Checked="Rock_Checked" IsChecked="True"/>
+        <RadioButton x:Name="ScissorsRadio" Content="Scissors" HorizontalAlignment="Left" Margin="22,475,0,0" VerticalAlignment="Top" Checked="ScissorsRadio_Checked"/>
+        <RadioButton x:Name="PaperRadio" Content="Paper" HorizontalAlignment="Left" Margin="22,534,0,0" VerticalAlignment="Top" Checked="PaperRadio_Checked"/>
+        <ProgressBar x:Name="PlayerProgressBar" HorizontalAlignment="Left" Height="42" Margin="10,299,0,0" VerticalAlignment="Top" Width="140"/>
+        <ProgressBar x:Name="ComputerProgressBar" HorizontalAlignment="Left" Height="42" Margin="210,299,0,0" VerticalAlignment="Top" Width="140"/>
+        <TextBlock x:Name="AppLabel" HorizontalAlignment="Center" Margin="114,10,101,0" TextWrapping="Wrap" Text="Rock Scissor Paper" VerticalAlignment="Top" Width="145"/>
+        <TextBlock x:Name="BottomLabel" HorizontalAlignment="Center" Margin="14,598,14,0" TextWrapping="Wrap" Text="Design by Martin Repicky g00328337@gmit.ie" VerticalAlignment="Top" Width="332" Tapped="BottomLabel_Tapped"/>
+        <TextBlock x:Name="LastGameLabel" HorizontalAlignment="Left" Margin="140,366,0,0" TextWrapping="Wrap" Text="Last Game:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="LastGame" HorizontalAlignment="Left" Margin="137,391,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="72" FontWeight="Bold" Foreground="#FFF73A10"/>
+        <TextBlock x:Name="ComputerScore" HorizontalAlignment="Left" Margin="275,374,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="PlayerScore" HorizontalAlignment="Left" Margin="75,373,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="27"/>
 
     </Grid>
 </Page>
